@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Order App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="mx-auto max-w-[600px] min-w-[300px] font-poppins">
+    
+    <!-- HEADER ------------------------------->
+    <header class="bg-burgerbg h-[120px] bg-[length:600px_120px] rounded-xl">
+        <div class="pt-2 pr-4 text-4xl font-bold text-right text-slate-200">
+            <p>Remi's Diner</p>
+        </div>
+    </header>
+
+
+
+    <!-- APP ---------------------------------->
+    <div id="app" class="px-2 mx-4">
+        <!-- MENU DISPLAY ------------->
+        <div id="menu-display">
+            <!-- MENU WILL RENDE HERE -->
+        </div>
+        <!-- PAYMENT DISPLAY ---------->
+        <div id="payment" class="hidden my-8">
+            <p class="my-4 text-lg font-bold text-center">Your Order: </p>
+            <!-- ITEMS IN CART -->
+            <div id="cart">
+                <!-- CART ITEMS WILL RENDER HERE -->
+            </div>
+            <!-- TOTAL PRICE -->
+            <div id="total" class="flex flex-row items-center my-2 border-t-2 border-gray-300 border-solid">
+                <p>Total Price:</p>
+                <p id="total-price" class="ml-auto">$0</p>
+            </div>
+            <div class="flex justify-center"> 
+                <button id="complete-order" class="px-4 border-2 border-gray-500 border-solid rounded-full hover:bg-red-300">Complete Order</button>
+            </div>
+        </div>
+        <div id="payment-modal" class="fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center hidden w-full h-full bg-transparent">
+            <div class="w-[300px] py-8 shadow-2xl bg-slate-100 rounded-xl shadow-black">
+                <form id="payment-form" class="flex flex-col items-center justify-center">
+                    <label for="card-number">Card Number 💳</label>
+                    <input 
+                        type="number" 
+                        id="card-number" 
+                        name="card-number"
+                        placeholder="1234-1234-1234-1234"
+                        required
+                        class="text-center"
+                        >
+                    <label for="card-date" class="mt-4">Card Date</label>
+                    <input 
+                        type="text" 
+                        id="card-date" 
+                        name="card-date"
+                        placeholder="01/26"
+                        required
+                        size="5"
+                        maxlength="5"
+                        class="text-center"
+                        >
+                    <label for="card-cvv" class="mt-4">CVV</label>
+                    <input 
+                        type="password" 
+                        id="card-cvv" 
+                        name="card-cvv"
+                        placeholder="***"
+                        required
+                        size="3"
+                        maxlength="3"
+                        class="text-center"
+                        >
+                    <button class="px-4 mt-8 border-2 border-gray-500 border-solid rounded-full hover:bg-red-300">MAKE PAYMENT</button>
+                </form>    
+            </div>
+        </div>
+    </div>
+    <!-- PAYMENT MODAL ------------------------>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
