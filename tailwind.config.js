@@ -7,7 +7,7 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif']
       },
       backgroundImage: {
-        'burgerbg': 'url(burger.jpg)',
+        'burgerbg': 'url(./img/burger.jpg)',
     },
     },
   },

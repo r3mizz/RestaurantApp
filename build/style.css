@@ -816,7 +816,7 @@ video {
 }
 
 .bg-burgerbg {
-  background-image: url(../build/img/burger.jpg);
+  background-image: url(./img/burger.jpg);
 }
 
 .bg-\[length\:600px_120px\] {
